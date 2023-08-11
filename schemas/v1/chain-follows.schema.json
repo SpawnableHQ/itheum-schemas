@@ -1,0 +1,23 @@
+{
+  "$id": "https://spawnable.io/schemas/data-stream/v1/chain-follows.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stream Chain Follows v1",
+  "version": "1.0.0",
+  "type": "object",
+  "properties": {
+    "blockchain": {
+      "type": "string",
+      "enum": ["bitcoin", "ethereum", "multiversx"]
+    },
+    "address": {
+      "type": "string"
+    },
+    "follows": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": ["blockchain", "address", "follows"]
+}

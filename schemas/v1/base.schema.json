@@ -1,0 +1,43 @@
+{
+  "$id": "https://spawnable.io/schemas/data-stream/v1/base.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stream Base v1",
+  "version": "1.0.0",
+  "type": "object",
+  "properties": {
+    "data_stream": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "creator": {
+          "type": "string"
+        },
+        "created_on": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "last_modified_on": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "data_schema": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "name",
+        "creator",
+        "created_on",
+        "last_modified_on",
+        "data_schema"
+      ]
+    },
+    "data": {
+      "type": "object"
+    }
+  },
+  "required": ["data_stream", "data"]
+}
